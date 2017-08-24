@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-//import { getRecommendedPlan } from './lib/getRecommendedPlan'
-import Form from './Form';
+import React from 'react';
+import { getRecommendedPlan } from './lib/getRecommendedPlan'
 
-class App extends Component {
-  // constructor(props){
-  //     super(props);
-  //
-  // }
+class Form extends React.Component {
+    // constructor(props){
+    //     super(props);
+    //
+    // }
 //   getRecommendedPlan() {
 //   //const formValuesArray = serializeArray(theForm());
 //       const formValuesArray = serializeArray(document.getElementById('form'));
@@ -79,32 +77,28 @@ class App extends Component {
 //       }
 //   }
 
-    render() {
-        return <Form />
-    }
-/*
     formSubmit(event) {
+        let formElement = document.getElementById('form');
         event.preventDefault();
-        window.alert(getRecommendedPlan());
+        window.alert(getRecommendedPlan(formElement));
     }
     render() {
         return (
             <section>
-            <form id="form">
-                <h1>Find the Sprout Social plan that's right for you.</h1>
-                <label>How many social profiles do you manage?</label>
-                <input type="text" name="socialprofiles" /><br />
-                <label>How many followers do your social profiles have?</label>
-                <input type="text" name="audience" /><br />
+                <form id="form">
+                    <h1>Find the Sprout Social plan that's right for you.</h1>
+                    <label>How many social profiles do you manage?</label>
+                    <input type="text" name="socialprofiles" /><br />
+                    <label>How many followers do your social profiles have?</label>
+                    <input type="text" name="audience" /><br />
                     <label>How many people are on your social media team?</label>
                     <input type="text" name="users"/><br />
                     <input type="submit" onClick={(event) => this.formSubmit(event)}/>
-            </form>
+                </form>
             </section>
 
         );
     }
-*/
 }
 
-export default App;
+export default Form;
