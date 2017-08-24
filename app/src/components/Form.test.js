@@ -6,3 +6,9 @@ it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Form />, div);
 });
+
+/**
+ * todo:
+ *   - testing for formSubmit method
+ *
+ */

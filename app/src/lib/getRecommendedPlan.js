@@ -1,13 +1,9 @@
-//import {planDataObj} from './planDataObj';
-
 import { getPlanData } from './getPlanData';
 import _ from 'lodash';
 
 export function getRecommendedPlan(formElement) {
-    //const formValuesArray = serializeArray(theForm());
     const planDataObj = getPlanData();
     const formValuesArray = serializeArray(formElement);
-
     const formValues = _.zipObject(_.map(formValuesArray, 'name'), _.map(formValuesArray, i => parseInt(i.value, 10) || 1));
 
     // Make 100% sure the plans are sorted in ascending order

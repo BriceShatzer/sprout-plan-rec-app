@@ -17,5 +17,10 @@ it('returns a string', () => {
     expect(typeof getRecommendedPlan(mockFormElement)).toBe('string');
 });
 
-
+/**
+ * todo:
+ *   - Tests checking that provided form values return the proper plan
+ *   - Figure out testing for serializeArray func (should it moved out of scope? Possibly renamed?)
+ *
+ */
 
