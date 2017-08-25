@@ -19,7 +19,7 @@ class App extends Component {
     
     
     displayRecommendedPlan() {
-        ReactDOM.render(<App />, document.getElementById('root'));
+        ReactDOM.render(<NewUnnamedComponent />, document.getElementById('root'));
     }
     
     render() {
