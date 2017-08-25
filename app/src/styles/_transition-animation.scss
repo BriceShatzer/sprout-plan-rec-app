@@ -1,0 +1,21 @@
+.form {
+    transition: bottom 400ms;
+    position: relative;
+    bottom: 0;
+
+    &.is-hidden {
+        bottom: 100vh;
+        + .plan-recommendation {
+            opacity: 1;
+            //top: 0;
+        }
+    }
+}
+
+.plan-recommendation {
+    transition: opacity 400ms;
+    opacity: 0;
+    //transition: top 400ms;
+    //position: relative;
+    //top: 100vh;
+}

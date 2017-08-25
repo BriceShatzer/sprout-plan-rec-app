@@ -13,19 +13,6 @@ body {
 .form {
     padding: $default-spacing;
     background-color: $base;
-
-    transition: bottom 400ms;
-    position: relative;
-    bottom: 0;
-
-    &.is-hidden {
-        position: relative;
-        bottom: 100vh;
-    }
-
-
-
-
-
 }
 
+@import "transition-animation";

@@ -409,10 +409,17 @@ body {
 
 .form {
   padding: 2rem;
-  background-color: #fff;
+  background-color: #fff; }
+
+.form {
   transition: bottom 400ms;
   position: relative;
   bottom: 0; }
   .form.is-hidden {
-    position: relative;
     bottom: 100vh; }
+    .form.is-hidden + .plan-recommendation {
+      opacity: 1; }
+
+.plan-recommendation {
+  transition: opacity 400ms;
+  opacity: 0; }
