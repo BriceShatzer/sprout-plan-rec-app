@@ -4,18 +4,14 @@ import { getRecommendedPlan } from '../lib/getRecommendedPlan'
 class Form extends React.Component {
     constructor(props) {
         super(props);
-        this.formSubmit = this.formSubmit.bind(this);
-
     }
     formSubmit(event) {
         event.preventDefault();
 
         //hide the form
-        // document.querySelector('.form').classList.add('is-hidden');
+        //document.querySelector('.form').classList.add('is-hidden'); /// < baller
         //this.props.setState({formIsHidden: true});
         this.props.toggleFormVisibility();
-        //alert(this.props.text)
-
 
 
         // get and display plan based on form inputs
@@ -34,14 +30,13 @@ class Form extends React.Component {
 
     render() {
         return (
-            // <h3>{this.props.formIsHidden ? "form is-hidden" : "form"}</h3>
-            // <h3>{this.props.text}</h3>
-            // <section className={this.props.formIsHidden ? "form is-hidden" : "form"}>
-
-            <section className="form">
+            
+            
+            
+            //<h3>{this.props.text}</h3>
+            <section className={this.props.formIsHidden ? "form is-hidden" : "form"}>
 
                 <h3>{this.props.formIsHidden ? "form is-hidden" : "form"}</h3>
-
                 <form id="form">
                     <h1>Find the Sprout Social plan that's right for you.</h1>
                     <label>How many social profiles do you manage?</label>
