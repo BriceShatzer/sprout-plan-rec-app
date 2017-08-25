@@ -16,10 +16,10 @@ class App extends Component {
         //this.setState({formIsHidden: !this.state.formIsHidden});
         alert('fired');
     }
-    
+
     
     displayRecommendedPlan() {
-        ReactDOM.render(<NewUnnamedComponent />, document.getElementById('root'));
+//        ReactDOM.render(<NewUnnamedComponent />, document.getElementById('root'));
     }
     
     render() {
