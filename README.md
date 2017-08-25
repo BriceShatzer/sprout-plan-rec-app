@@ -36,5 +36,5 @@ The build is minified and the filenames include the hashes.<br>
 This project was bootstrapped with the [Create React App](https://github.com/facebookincubator/create-react-app) which provides stuff like
 [Babel](https://babeljs.io), [Webpack](https://webpack.github.io), & [Jest](https://facebook.github.io/jest/) out of the box.
 
-<!-- Additionally, [node-sass](https://github.com/sass/node-sass) for CSS preprocessing has been added. -->
+Additionally, [node-sass](https://github.com/sass/node-sass) for CSS preprocessing has been added.
 
