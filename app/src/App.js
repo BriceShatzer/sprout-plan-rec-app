@@ -6,7 +6,9 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            formIsHidden: false
+            formIsHidden: false,
+            //formIsHidden: true, // <- value for mockup only
+            planRecommendation: 'team' // <- value for mockup only
         };
     }
 
@@ -26,6 +28,7 @@ class App extends Component {
                 />
                 <PlanRecommendation
                     toggleFormVisibility = {this.toggleFormVisibility}
+                    planRecommendation = {this.state.planRecommendation}
                 />
             </div>
 

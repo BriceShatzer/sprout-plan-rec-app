@@ -13,7 +13,7 @@ class PlanRecommendation extends React.Component {
     render() {
         return (
             <section className="plan-recommendation">
-                <a href="#" id="showForm" onClick={(event) => this.returnToForm(event)}>Show Form</a>
+                <a href="/" id="showForm" onClick={(event) => this.returnToForm(event)}>Show Form</a>
             </section>
         )
         
