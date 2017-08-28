@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import PlanRecommendation from './components/PlanRecommendation';
+import TestButtons from './components/testButtons';
 
 class App extends Component {
     constructor(props) {
@@ -16,8 +17,20 @@ class App extends Component {
         this.setState({formIsHidden: !this.state.formIsHidden});
     };
 
+    updatePlanRecommendation = (recommendation) => {
+        this.setState({
+           planRecommendation: recommendation
+        });
+    };
+
     displayRecommendedPlan = () => {};
-    
+
+    /**
+     * todo: catch and handle popstate
+     *
+     */
+
+
     render() {
         
         return(
@@ -30,11 +43,12 @@ class App extends Component {
                     toggleFormVisibility = {this.toggleFormVisibility}
                     planRecommendation = {this.state.planRecommendation}
                 />
+                <TestButtons
+                    updatePlanRecommendation = {this.updatePlanRecommendation}
+                />
+
             </div>
 
-
-            
-                
         ); 
     }
 }

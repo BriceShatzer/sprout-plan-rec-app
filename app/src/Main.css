@@ -411,15 +411,38 @@ body {
   padding: 2rem;
   background-color: #fff; }
 
+.plan-recommendation .detail {
+  display: flex; }
+  .plan-recommendation .detail div {
+    padding: 0.5rem; }
+
 .form {
-  transition: bottom 400ms;
+  transition: all 400ms;
   position: relative;
-  bottom: 0; }
+  bottom: 0;
+  max-height: 100vh; }
   .form.is-hidden {
-    bottom: 100vh; }
+    max-height: 0;
+    overflow-y: hidden;
+    padding-top: 0;
+    padding-bottom: 0; }
     .form.is-hidden + .plan-recommendation {
       opacity: 1; }
 
 .plan-recommendation {
   transition: opacity 400ms;
   opacity: 0; }
+
+.form {
+  display: none; }
+
+.plan-recommendation {
+  opacity: 1 !important; }
+
+.test-triggers {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex; }
+  .test-triggers button {
+    margin: 0.5rem 0.25rem; }

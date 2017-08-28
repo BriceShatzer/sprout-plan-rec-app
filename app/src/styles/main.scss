@@ -29,3 +29,21 @@ body {
 
 
 @import "transition-animation";
+
+//debugging styles
+.form {
+    display: none;
+}
+.plan-recommendation {
+    opacity: 1 !important;
+}
+.test-triggers {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    //justify-content: around;
+    button {margin:0.5rem 0.25rem}
+
+}
+
