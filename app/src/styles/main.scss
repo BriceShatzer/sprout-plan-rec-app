@@ -14,5 +14,18 @@ body {
     padding: $default-spacing;
     background-color: $base;
 }
+.plan-recommendation {
+    .details {
+
+    }
+    .detail {
+        display: flex;
+        div {
+            padding: 0.5rem;
+        }
+    }
+
+}
+
 
 @import "transition-animation";
