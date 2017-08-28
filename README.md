@@ -33,6 +33,9 @@ The build is minified and the filenames include the hashes.<br>
 
 ## Notes
 
+Minor update to the provided data:
+"Cost Per Month" detail for the "Deluxe" plan was provided as `59`. It has been updated to '$59' to match the convention
+used by the other plans.
 
 <!--
 The [mockup](https://sproutsocial.invisionapp.com/share/9H8G4HC34#/screens/185047942) references "Plan value proposition"

@@ -6,7 +6,7 @@ export function getPlanData() {
         'Deluxe': {
             headline: 'For the social small business',
             details: {
-                'Cost Per Month': 59,
+                'Cost Per Month': '$59',
                 'Number of Social Profiles': 5,
                 'Brand Keywords per Group': 5,
                 'Included Users': 1,
