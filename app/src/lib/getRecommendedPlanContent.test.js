@@ -1,6 +1,6 @@
 import React from 'react';
 import { getRecommendedPlanContent } from './getRecommendedPlanContent';
-import { getPlanData } from './getPlanData';
+import { getPlanData } from '../data/getPlanData';
 
 let planDataObj = getPlanData();
 
