@@ -1,4 +1,4 @@
-import { getPlanData } from './getPlanData';
+import { getPlanData } from '../data/getPlanData';
 import _ from 'lodash';
 
 export function getRecommendedPlan(formElement) {

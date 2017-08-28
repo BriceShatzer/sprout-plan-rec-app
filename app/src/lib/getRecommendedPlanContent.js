@@ -1,4 +1,4 @@
-import { getPlanData } from './getPlanData';
+import { getPlanData } from '../data/getPlanData';
 
 export function getRecommendedPlanContent(recommendedPlanName) {
     const planDataObj = getPlanData();

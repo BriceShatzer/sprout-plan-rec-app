@@ -1,4 +1,4 @@
-export function getPlanLinks() {
+export function getPlanLinksData() {
     /**
      * In the future, this function could be used to retrieve the plan links via a service
      */

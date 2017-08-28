@@ -1,7 +1,6 @@
-import { getPlanLinks } from './getPlanLinks';
+import { getPlanLinksData } from './getPlanLinksData';
 
-const planLinksObj = getPlanLinks();
-
+const planLinksObj = getPlanLinksData();
 
 it('returns an object', () => {
     expect(typeof planLinksObj).toBe('object');
