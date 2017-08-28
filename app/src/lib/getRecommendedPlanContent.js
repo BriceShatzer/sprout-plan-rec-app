@@ -8,11 +8,12 @@ export function getRecommendedPlanContent(recommendedPlanName) {
 
     // Look to see if the recommended plan name matches a plan name in the plan data
     Object.getOwnPropertyNames(planDataObj).forEach(function (planName){
-        const normalizedPlanName = recommendedPlanName.trim().toLowerCase();
+        const normalizedPlanName = planName.trim().toLowerCase();
 
         //if one matches, construct a content object with that plan's information
         if (normalizedRecommendedPlanName === normalizedPlanName) {
             recommendedPlanContent = planDataObj[planName];
+
             if( !recommendedPlanContent.hasOwnProperty('name') ){
                 recommendedPlanContent.name = planName;
             }
