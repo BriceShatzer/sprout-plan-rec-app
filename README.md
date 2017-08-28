@@ -33,6 +33,8 @@ The build is minified and the filenames include the hashes.<br>
 
 ## Notes
 
+
+<!--
 The [mockup](https://sproutsocial.invisionapp.com/share/9H8G4HC34#/screens/185047942) references "Plan value proposition"
 which was absent from the data/content provided in the CodePen. Each plan in this project has been updated using the following
 information taken from the [pricing page](https://sproutsocial.com/pricing):
@@ -71,7 +73,7 @@ information taken from the [pricing page](https://sproutsocial.com/pricing):
     + "Scheduled Report Delivery & Reporting API",
     + "Includes 20 Social Profiles"
 
-
+-->
 This project was bootstrapped with the [Create React App](https://github.com/facebookincubator/create-react-app) which provides stuff like
 [Babel](https://babeljs.io), [Webpack](https://webpack.github.io), & [Jest](https://facebook.github.io/jest/) out of the box.
 
