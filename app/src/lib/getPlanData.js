@@ -5,6 +5,9 @@ export function getPlanData() {
     const planDataObj = {
         'Deluxe': {
             headline: 'For the social small business',
+            valueProposition: [
+                "For those getting started with social media management we offer Standard at $59 per user per month.Includes all standard features including social inbox, publishing and reporting."
+            ],
             details: {
                 'Cost Per Month': 59,
                 'Number of Social Profiles': 5,
@@ -24,6 +27,16 @@ export function getPlanData() {
         },
         'Premium': {
             headline: 'A bigger plan for bigger social needs',
+            valueProposition: [
+                "Complete Social Media Management",
+                "All-in-one Social Inbox",
+                "Monitor Profiles, Keywords & Locations",
+                "Tasking & Social CRM Toolset",
+                "Publish, Schedule, Draft & Queue Posts",
+                "Social Content Calendar",
+                "Group, Profile & Post-Level Reporting",
+                "Includes 10 Social Profiles"
+            ],
             details: {
                 'Cost Per Month': '$99',
                 'Number of Social Profiles': 10,
@@ -43,6 +56,16 @@ export function getPlanData() {
         },
         'Team': {
             headline: 'Collaborate and conquer social media',
+            valueProposition: [
+                "Includes all Premium Features and...",
+                "Tag, Categorize & Report on Inbox Messages",
+                "Trends & Engagement Reports",
+                "Team & Productivity Reporting",
+                "Approval Workflow & Audience Targeting",
+                "Campaign Tagging & Reporting",
+                "Competitive Benchmark Reporting",
+                "Includes 15 Social Profiles"
+            ],
             details: {
                 'Cost Per Month': '$500',
                 'Number of Social Profiles': 30,
@@ -62,6 +85,16 @@ export function getPlanData() {
         },
         'Enterprise': {
             headline: 'Maximize your global social reach',
+            valueProposition: [
+                "Includes all Corporate Features and...",
+                "Advanced Customer Care Tools & Reports",
+                "Advanced Keyword Listening",
+                "Build Custom Chatbots with Automation Tools",
+                "Custom URL Tracking",
+                "Store Media in a Shared Asset Library",
+                "Scheduled Report Delivery & Reporting API",
+                "Includes 20 Social Profiles"
+            ],
             details: {
                 'Cost Per Month': '$1,500',
                 'Number of Social Profiles': 50,
