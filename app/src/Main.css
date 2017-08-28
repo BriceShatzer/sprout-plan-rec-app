@@ -416,6 +416,9 @@ body {
   .plan-recommendation .detail div {
     padding: 0.5rem; }
 
+.plan-recommendation .buttons a {
+  padding: 0.5rem; }
+
 .form {
   transition: all 400ms;
   position: relative;
