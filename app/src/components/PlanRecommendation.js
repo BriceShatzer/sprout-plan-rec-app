@@ -9,10 +9,10 @@ class PlanRecommendation extends React.Component {
     //     this.state = {}
     // }
 
-    returnToForm(event) {
-        event.preventDefault();
-        this.props.toggleFormVisibility();
-    }
+    // returnToForm(event) {
+    //     event.preventDefault();
+    //     this.props.toggleFormVisibility();
+    // }
     
     render() {
         const content = getRecommendedPlanContent(this.props.planRecommendation);
@@ -27,11 +27,9 @@ class PlanRecommendation extends React.Component {
         
         return (
             <section className="plan-recommendation">
-                <h3>The plan that's right for you is...</h3>
-                <h1>{content.name}</h1>
-                <div className="value-propositions">
-                    {content.headline}
-                </div>
+                <h1 className="guide-headline">The plan that's right for you is...</h1>
+                <h1 className="plan-name">{content.name}</h1>
+                <h2 className="value-proposition">{content.headline}</h2>
                 <div className="details">
                     {detailElements}
                 </div>

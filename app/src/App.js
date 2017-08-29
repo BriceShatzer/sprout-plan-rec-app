@@ -37,6 +37,7 @@ class App extends Component {
             <div>
                 <Form
                     formIsHidden = {this.state.formIsHidden}
+                    updatePlanRecommendation = {this.updatePlanRecommendation}
                     toggleFormVisibility = {this.toggleFormVisibility}
                 />
                 <PlanRecommendation

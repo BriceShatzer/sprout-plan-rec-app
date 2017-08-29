@@ -1,3 +1,4 @@
+/*
 .form {
     //transition: bottom 400ms;
     //transition: max-height 400ms;
@@ -8,6 +9,7 @@
 
     &.is-hidden {
         //bottom: 100vh;
+        opacity: 0;
         max-height: 0;
         overflow-y: hidden;
         padding-top:0;
@@ -18,11 +20,45 @@
         }
     }
 }
+*/
+//==
+
+#root {position: relative;}
+.plan-recommendation {
+    opacity: 0;
+    z-index: -1;
+    max-height: 100%;
+    overflow-y: hidden;
+
+}
+
+.form,
+.plan-recommendation {
+    transition: opacity 250ms;
+
+}
+.form {
+    z-index: 3;
+    &.is-hidden {
+        z-index: 1;
+        opacity: 0;
+
+        + .plan-recommendation {
+            z-index: 2;
+            opacity: 1;
+            max-height: unset;
+            overflow-y: auto;
+        }
+    }
+
+}
 
 .plan-recommendation {
-    transition: opacity 400ms;
+
+    transition: all 200ms;
     opacity: 0;
-    //transition: top 400ms;
-    //position: relative;
-    //top: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
 }

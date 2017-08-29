@@ -3,18 +3,57 @@
 
 $default-spacing: 2rem;
 
+$border-radius: 1rem/6;
+$border-width: 1rem/9;
+
+h1,h2,h3,h4 {font-weight: 600;}
+
+%button {
+    $border-radius: 1rem/6;
+    $border-width: 1rem/9;
+    border-radius: $border-radius;
+    border: $border-width solid transparent;
+    cursor: pointer;
+    transition: background-color 100ms;
+
+
+}
 
 body {
     padding: $default-spacing;
     font-family: "Proxima Nova",proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
     background-color: $light-gray;
 }
+.guide-headline {
+    font-weight: 400;
+    margin-top: 0;
+}
 
-.form {
+.form,
+.plan-recommendation {
     padding: $default-spacing;
     background-color: $base;
+    text-align: center;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .logo {flex: 1 1 25%}
+    .guide-headline {flex:3 3 75%;}
 }
 .plan-recommendation {
+    h3 {}
+    .plan-name {
+        font-size: 3rem;
+    }
+    .value-proposition {
+        font-size: 1.75rem;
+    }
     .details {
 
     }
@@ -25,7 +64,33 @@ body {
         }
     }
     .buttons {
-        a {padding: 0.5rem;}
+        font-size: 1.25rem;
+        letter-spacing: .1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        a {
+            @extend %button;
+            display: block;
+            color: $base;
+            text-decoration: none;
+            flex: 0 1 75%;
+            margin-top: $default-spacing/2;
+            margin-bottom: $default-spacing/2;
+
+
+            background-color: $green-primary;
+            padding: 0.75rem;
+
+            border-radius: $border-radius;
+
+            &:hover{
+                background-color: $green-secondary;
+            }
+        }
+
     }
 
 }
