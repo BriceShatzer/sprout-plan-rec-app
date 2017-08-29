@@ -405,11 +405,23 @@ template {
 h1, h2, h3, h4 {
   font-weight: 600; }
 
-.plan-recommendation .buttons a {
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.form .find-my-plan, .plan-recommendation.error .back, .plan-recommendation .buttons a {
   border-radius: 0.16667rem;
   border: 0.11111rem solid transparent;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  transition: background-color 100ms; }
+  transition: background-color 100ms;
+  color: #fff;
+  text-decoration: none;
+  background-color: #59CB59; }
+  .form .find-my-plan:hover, .plan-recommendation.error .back:hover, .plan-recommendation .buttons a:hover {
+    background-color: #2BB656; }
 
 body {
   padding: 2rem;
@@ -434,10 +446,25 @@ body {
   align-items: center; }
 
 .form .logo {
-  flex: 1 1 25%; }
+  max-width: 100%; }
 
 .form .guide-headline {
-  flex: 3 3 75%; }
+  padding: 0 1rem;
+  text-align: left;
+  margin-bottom: 0; }
+
+.form .find-my-plan {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.plan-recommendation.error h4 {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.plan-recommendation.error .back {
+  display: inline-block; }
 
 .plan-recommendation .plan-name {
   font-size: 3rem; }
@@ -458,16 +485,9 @@ body {
   flex-wrap: wrap; }
   .plan-recommendation .buttons a {
     display: block;
-    color: #fff;
-    text-decoration: none;
     flex: 0 1 75%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #59CB59;
-    padding: 0.75rem;
-    border-radius: 0.16667rem; }
-    .plan-recommendation .buttons a:hover {
-      background-color: #2BB656; }
+    margin-bottom: 1rem; }
 
 /*
 .form {
