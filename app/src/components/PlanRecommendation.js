@@ -39,7 +39,7 @@ class PlanRecommendation extends React.Component {
                     <h2 className="value-proposition">All Plans Include a Free 30-day Trial</h2>
                     <h4 className="final-pitch">
                         Best-in-class social media management and engagement software. <br/>
-                        Change Plans or cancel at anytime.
+                        Change plans or cancel at any time.
                     </h4>
                     <div className="buttons">
                         <a href={planLink} target="_blank" rel="noopener noreferrer">
