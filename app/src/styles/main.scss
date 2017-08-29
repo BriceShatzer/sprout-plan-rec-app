@@ -5,6 +5,7 @@
 html {min-width: 320px;}
 
 body {
+    margin-top: $nav-height;
     padding: $default-spacing;
     font-family: "Proxima Nova",proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
     background-color: $light-gray;
@@ -53,6 +54,7 @@ input {
 }
 
 
+@import "nav";
 @import "form-component";
 @import "plan-recommendation-component";
 @import "transition-behavior";

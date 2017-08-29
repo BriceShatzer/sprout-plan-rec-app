@@ -1,8 +1,9 @@
 $default-spacing: 2rem;
 
-//$medium-width: 45rem; // 720px @ root=16px
 $medium-width: 40rem; // 640px @ root=16px
 $small-width: 30rem;  // 480px @ root=16px
+
+$nav-height: 4.125rem; // 66px @root=16px
 
 @mixin large {
     @media screen and (min-width:#{$medium-width}){

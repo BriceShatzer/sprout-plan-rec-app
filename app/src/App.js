@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from './components/Nav';
 import Form from './components/Form';
 import PlanRecommendation from './components/PlanRecommendation';
 
@@ -28,6 +29,7 @@ class App extends Component {
     render() {
         return(
             <div>
+                <Nav />
                 <Form
                     formIsHidden = {this.state.formIsHidden}
                     updatePlanRecommendation = {this.updatePlanRecommendation}

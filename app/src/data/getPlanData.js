@@ -82,5 +82,4 @@ export function getPlanData() {
         }
     };
     return planDataObj;
-
 }
