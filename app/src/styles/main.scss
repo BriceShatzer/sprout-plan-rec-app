@@ -21,6 +21,7 @@ h1,h2,h3,h4 {
     margin-bottom:0;
     padding-top: $default-spacing/2;
     padding-bottom: $default-spacing/2;
+    color: $text-color_dark;
 }
 
 a {
@@ -36,10 +37,11 @@ input {
 }
 
 .guide-headline {
-    font-weight: 400;
+    font-weight: 600;
     padding-top: 0;
+    font-size: 1.33rem;
     @include medium{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 

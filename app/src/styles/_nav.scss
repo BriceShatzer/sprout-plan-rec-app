@@ -21,12 +21,14 @@
 
     & > div {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
         padding-left: $default-spacing*0.333;
         padding-right: $default-spacing*0.333;
 
-        a {
+        .branding {
             display: flex;
             align-items: center;
             height: $nav-height;
@@ -36,10 +38,6 @@
         @include large {
             max-width: 75rem;
         }
-
-        //@include large { background-color: lightgreen; }
-        //@include medium { background-color: lightgoldenrodyellow; }
-        //@include small { background-color:lightcoral; }
-
     }
+
 }
