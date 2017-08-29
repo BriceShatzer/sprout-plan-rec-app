@@ -1,19 +1,26 @@
 import { getPlanData } from './getPlanData';
 
-const value = getPlanData();
+const planDataObj = getPlanData();
 
 
 it('returns an object', () => {
-    expect(typeof value).toBe('object');
+    expect(typeof planDataObj).toBe('object');
 });
 
+describe('returned object contains expected/required values', () => {
 
-/**
- * todo:
- *   Write tests checking to make sure the structure of the object attributes agrees with what the getRecommendedPlan function is expecting
- *   For example stuff like:
- *      for (plan in planDataObj) {
- *          expect(plan.values.socialprofiles).toBeDefined()
- *      }
- *
- */
+    Object.getOwnPropertyNames(planDataObj).forEach(function (planName){
+        let planData = planDataObj[planName];
+
+        expect(typeof planData.headline).toEqual('string');
+        expect(typeof planData.details).toEqual('object');
+        expect(typeof planData.values).toEqual('object');
+        expect(typeof planData.values.socialprofiles).toEqual('number');
+        expect(typeof planData.values.users).toEqual('number');
+        expect(typeof planData.values.audience).toEqual('number');
+        expect(typeof planData.values.costPerMonth).toEqual('number');
+        expect(typeof planData.values.costPerUser).toEqual('number');
+    });
+    
+
+});

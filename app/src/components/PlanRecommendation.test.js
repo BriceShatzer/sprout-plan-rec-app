@@ -2,12 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PlanRecommendation from './PlanRecommendation';
 
-it ('does math', () => {
-    expect(1+2).toBe(3);
+it('renders without crashing', () => {
+    let props = {
+        formIsHidden: false,
+        planRecommendation: '',
+        toggleFromVisibility: () => {
+            this.props.formIsHidde=!this.props.formIsHidden
+        }
+    };
+    const component = <PlanRecommendation
+        toggleFormVisibility = {props.toggleFormVisibility}
+        planRecommendation = {props.planRecommendation}
+    />;
+
+    const div = document.createElement('div');
+    ReactDOM.render(component, div);
 });
 
-
-// it('renders without crashing', () => {
-//     const div = document.createElement('div');
-//     ReactDOM.render(<PlanRecommendation />, div);
-// });

@@ -18,10 +18,6 @@ class Form extends React.Component {
 
     render() {
         return (
-
-            //<h3>{this.props.text}</h3>
-            //<h3>{this.props.formIsHidden ? "form is-hidden" : "form"}</h3>
-            //<input type="submit" onClick={(event) => this.formSubmit(event)}/>
             <section className={this.props.formIsHidden ? "form is-hidden" : "form"}>
                 <form id="form">
                     <div className="header">

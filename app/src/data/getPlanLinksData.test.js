@@ -7,12 +7,14 @@ it('returns an object', () => {
 });
 
 
-Object.getOwnPropertyNames(planLinksObj).forEach(function (planName){
-    let planPath = planLinksObj[planName];
-    let possibleHost1 = /^https:\/\/app.sproutsocial.com\//;
-    let possibleHost2 = /^https:\/\/sproutsocial.com\//;
+it('returned object contains valid values', () => {
+    Object.getOwnPropertyNames(planLinksObj).forEach(function (planName) {
+        let planPath = planLinksObj[planName];
+        let possibleHost1 = /^https:\/\/app.sproutsocial.com\//;
+        let possibleHost2 = /^https:\/\/sproutsocial.com\//;
 
-    expect(typeof planPath).toBe('string');
-    
-    expect(possibleHost1.test(planPath) || possibleHost2.test(planPath)).toBe(true);
+        expect(typeof planPath).toBe('string');
+
+        expect(possibleHost1.test(planPath) || possibleHost2.test(planPath)).toBe(true);
+    });
 });

@@ -17,10 +17,29 @@ it('returns a string', () => {
     expect(typeof getRecommendedPlan(mockFormElement)).toBe('string');
 });
 
+describe('recommends correct plan based on multiple users', () => {
+    let userCount;
+    for (userCount = 0; userCount < 20; userCount++) {
+        mockFormElement.users = userCount;
+        let expectedValue;
+/*
+        if (userCount <=10) {
+            expectedValue = 'Deluxe';
+        } else if (userCount >= 3 && userCount < 10 ){
+            expectedValue = 'Team';
+        } else if (userCount >= 10 ){
+            expectedValue = 'Enterprise';
+        }
+*/
+        expectedValue = 'Deluxe';
+        expect(getRecommendedPlan(mockFormElement)).toBe(expectedValue);
+    }
+
+});
+
 /**
  * todo:
- *   - Tests checking that provided form values return the proper plan
- *   - Figure out testing for serializeArray func (should it moved out of scope? Possibly renamed?)
- *
+ *   - Dissect the provided getPlanData function and write a suite of tests that check that
+ *   provided form values return the proper plan title. A structure similar to the one commented out should work.
  */
 
