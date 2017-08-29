@@ -9,7 +9,11 @@ class App extends Component {
         this.state = {
             formIsHidden: false,
             //formIsHidden: true, // <- value for mockup only
-            planRecommendation: 'team' // <- value for mockup only
+            planRecommendation: ''
+        };
+
+        window.onpopstate = () => {
+            this.toggleFormVisibility();
         };
     }
 
@@ -23,16 +27,7 @@ class App extends Component {
         });
     };
 
-    displayRecommendedPlan = () => {};
-
-    /**
-     * todo: catch and handle popstate
-     *
-     */
-
-
     render() {
-        
         return(
             <div>
                 <Form
