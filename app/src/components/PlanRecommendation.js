@@ -30,11 +30,13 @@ class PlanRecommendation extends React.Component {
 
             return (
                 <section className="plan-recommendation">
-                    <h1 className="guide-headline">The plan that's right for you is...</h1>
+                    <h2 className="guide-headline">The plan that's right for you is...</h2>
                     <h1 className="plan-name">{content.name}</h1>
                     <h2 className="value-proposition">{content.headline}</h2>
                     <table className="details">
-                        {detailElements}
+                        <tbody>
+                            {detailElements}
+                        </tbody>
                     </table>
                     <h2 className="value-proposition">All Plans Include a Free 30-day Trial</h2>
                     <h4 className="final-pitch">

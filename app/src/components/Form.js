@@ -1,6 +1,6 @@
 import React from 'react';
 import { getRecommendedPlan } from '../lib/getRecommendedPlan';
-import logo from '../images/logo.png';
+import logo from '../assets/logo.png';
 
 class Form extends React.Component {
     findPlan(event) {

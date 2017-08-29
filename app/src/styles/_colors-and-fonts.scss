@@ -1,0 +1,37 @@
+$green-1: #75DD66;
+$green-2: #59CB59;
+$green-3: #2BB656;
+$green-4: #0CA750;
+
+
+$green-primary: $green-2;
+$green-secondary: $green-3;
+
+$base: #fff;
+$light-gray: #f3f4f4;
+$dark-gray: #364141;
+
+$text-color_dark: #162020;
+$text-color_light: #364141;
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/assets/fonts/Proxima Nova Regular-webfont.eot');
+    src: url('/assets/fonts/Proxima Nova Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Proxima Nova Regular-webfont.woff') format('woff'),
+    url('/assets/fonts/Proxima Nova Regular-webfont.ttf') format('truetype'),
+    url('/assets/fonts/Proxima Nova Regular-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/assets/fonts/Proxima Nova Semibold-webfont.eot');
+    src: url('/assets/fonts/Proxima Nova Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Proxima Nova Semibold-webfont.woff') format('woff'),
+    url('/assets/fonts/Proxima Nova Semibold-webfont.ttf') format('truetype'),
+    url('/assets/fonts/Proxima Nova Semibold-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
