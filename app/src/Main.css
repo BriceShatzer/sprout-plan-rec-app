@@ -406,23 +406,35 @@ template {
   border-radius: 0.16667rem;
   border: 0.11111rem solid transparent;
   padding: 0.75rem 1rem;
-  cursor: pointer;
-  transition: background-color 100ms;
+  font-size: 1.25rem;
+  letter-spacing: .1em;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+  transition: background-color 100ms;
   background-color: #59CB59; }
   .form .find-my-plan:hover, .plan-recommendation.error .back:hover, .plan-recommendation .buttons a:hover {
     background-color: #2BB656; }
+  @media screen and (max-width: 40rem) {
+    .form .find-my-plan, .plan-recommendation.error .back, .plan-recommendation .buttons a {
+      font-size: 1.125rem; } }
 
 .form:after {
   content: "";
   display: table;
   clear: both; }
 
+html {
+  min-width: 320px; }
+
 body {
   padding: 2rem;
   font-family: "Proxima Nova",proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
   background-color: #f3f4f4; }
+  @media screen and (max-width: 30rem) {
+    body {
+      padding: 0;
+      background-color: #fff; } }
 
 h1, h2, h3, h4 {
   font-weight: 600;
@@ -460,9 +472,16 @@ input:focus {
 .form .header {
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 30rem) {
+    .form .header {
+      flex-wrap: wrap;
+      justify-content: center; } }
 
 .form .logo {
   max-width: 100%; }
+  @media screen and (max-width: 30rem) {
+    .form .logo {
+      max-width: 50%; } }
 
 .form .guide-headline {
   text-align: left;
@@ -470,6 +489,10 @@ input:focus {
   @media screen and (min-width: 40rem) {
     .form .guide-headline {
       padding: 0 0 0 0.25em; } }
+  @media screen and (max-width: 30rem) {
+    .form .guide-headline {
+      text-align: center;
+      padding-bottom: 1rem; } }
 
 .form .questions {
   text-align: left;
@@ -477,18 +500,23 @@ input:focus {
   .form .questions p {
     margin: 0;
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    line-height: 2; }
+    padding-bottom: 1rem; }
     @media screen and (max-width: 40rem) {
       .form .questions p {
         font-size: 1.25rem;
         line-height: 1.5rem; } }
+    @media screen and (max-width: 30rem) {
+      .form .questions p {
+        line-height: 1.75rem; } }
 
 .form input, .form select {
   font-size: 1.25rem;
   text-align: center;
   margin-left: 0.5em;
   margin-right: 0.5em; }
+  @media screen and (max-width: 30rem) {
+    .form input, .form select {
+      font-size: 1rem; } }
 
 .form input[type="number"] {
   max-width: 6em;
@@ -497,54 +525,68 @@ input:focus {
 .form input[name="users"] {
   max-width: 3em; }
 
-.form select {
-  margin-left: 0.5em;
-  margin-right: 0.5em; }
-
 .form .find-my-plan {
   float: right;
   display: inline-block;
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-@media screen and (max-width: 30rem) {
-  .form .header {
-    flex-wrap: wrap;
-    justify-content: center; }
-  .form .logo {
-    max-width: 50%; }
-  .form .guide-headline {
-    text-align: center;
-    padding-bottom: 1rem; } }
-
-.plan-recommendation.error h4 {
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.plan-recommendation.error .back {
-  display: inline-block; }
+.plan-recommendation.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0; }
+  .plan-recommendation.error h4 {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (max-width: 30rem) {
+      .plan-recommendation.error h4 {
+        max-width: 100%; } }
+  .plan-recommendation.error .back {
+    display: inline-block;
+    margin-top: 1rem; }
 
 .plan-recommendation .plan-name {
   font-size: 3rem; }
+  @media screen and (max-width: 30rem) {
+    .plan-recommendation .plan-name {
+      font-size: 2.25rem; } }
 
 .plan-recommendation .value-proposition {
   font-size: 1.75rem; }
+  @media screen and (max-width: 40rem) {
+    .plan-recommendation .value-proposition {
+      font-size: 1.5rem; } }
 
 .plan-recommendation .details {
   padding: 1rem;
-  font-size: 1.25rem;
   margin-left: auto;
   margin-right: auto; }
+  @media screen and (max-width: 30rem) {
+    .plan-recommendation .details {
+      padding-left: 0;
+      padding-right: 0;
+      border-collapse: collapse; } }
 
-.plan-recommendation .detail td {
-  padding: 0.5rem 1rem; }
-  .plan-recommendation .detail td:first-child {
-    text-align: left; }
+.plan-recommendation .detail {
+  font-size: 1.25rem; }
+  .plan-recommendation .detail td {
+    padding: 0.5rem 1rem; }
+    .plan-recommendation .detail td:first-child {
+      text-align: left; }
+  @media screen and (max-width: 30rem) {
+    .plan-recommendation .detail {
+      font-size: 1rem; }
+      .plan-recommendation .detail:nth-child(odd) {
+        background-color: #f3f4f4; } }
+
+@media screen and (max-width: 40rem) {
+  .plan-recommendation .final-pitch br {
+    display: none; } }
 
 .plan-recommendation .buttons {
-  font-size: 1.25rem;
-  letter-spacing: .1em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -554,35 +596,12 @@ input:focus {
     margin-top: 1rem;
     margin-bottom: 1rem; }
 
-/*
-.form {
-    //transition: bottom 400ms;
-    //transition: max-height 400ms;
-    transition: all 400ms;
-    position: relative;
-    bottom: 0;
-    max-height: 100vh;
-
-    &.is-hidden {
-        //bottom: 100vh;
-        opacity: 0;
-        max-height: 0;
-        overflow-y: hidden;
-        padding-top:0;
-        padding-bottom: 0;
-        + .plan-recommendation {
-            opacity: 1;
-            //top: 0;
-        }
-    }
-}
-*/
 #root {
   position: relative; }
 
 .plan-recommendation {
   opacity: 0;
-  z-index: -1;
+  z-index: 1;
   max-height: 100%;
   overflow-y: hidden; }
 
@@ -591,6 +610,7 @@ input:focus {
   transition: opacity 250ms; }
 
 .form {
+  position: relative;
   z-index: 3; }
   .form.is-hidden {
     z-index: 1;
@@ -607,11 +627,8 @@ input:focus {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0; }
-
-@media screen and (min-width: 40rem) {
-  body {
-    background-color: lightgreen; } }
+  right: 0;
+  margin-bottom: 2rem; }
 
 .questions-x {
   display: none; }
@@ -620,6 +637,17 @@ input:focus {
   position: fixed;
   right: 0;
   top: 0;
-  display: flex; }
+  display: flex;
+  z-index: 5;
+  opacity: 0.5; }
   .test-triggers button {
     margin: 0.5rem 0.25rem; }
+    @media screen and (min-width: 40rem) {
+      .test-triggers button {
+        background-color: lightgreen; } }
+    @media screen and (max-width: 40rem) {
+      .test-triggers button {
+        background-color: lightgoldenrodyellow; } }
+    @media screen and (max-width: 30rem) {
+      .test-triggers button {
+        background-color: lightcoral; } }

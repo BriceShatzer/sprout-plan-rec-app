@@ -36,8 +36,8 @@ class PlanRecommendation extends React.Component {
                     <table className="details">
                         {detailElements}
                     </table>
-                    <h2>All Plans Include a Free 30-day Trial</h2>
-                    <h4>
+                    <h2 className="value-proposition">All Plans Include a Free 30-day Trial</h2>
+                    <h4 className="final-pitch">
                         Best-in-class social media management and engagement software. <br/>
                         Change Plans or cancel at anytime.
                     </h4>

@@ -2,11 +2,16 @@
 @import "colors";
 @import "variables-and-mixins";
 
+html {min-width: 320px;}
 
 body {
     padding: $default-spacing;
     font-family: "Proxima Nova",proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
     background-color: $light-gray;
+    @include small {
+        padding: 0;
+        background-color: $base;
+    }
 }
 
 h1,h2,h3,h4 {
@@ -54,7 +59,7 @@ input {
 
 
 body {
-    @include large {  background-color: lightgreen;  }
+
 }
 
 
@@ -65,7 +70,14 @@ body {
     top: 0;
     display: flex;
     //justify-content: around;
-    button {margin:0.5rem 0.25rem}
+    button {
+        margin:0.5rem 0.25rem;
+        @include large { background-color: lightgreen; }
+        @include medium { background-color: lightgoldenrodyellow; }
+        @include small { background-color: lightcoral }
+    }
+    z-index: 5;
+    opacity: 0.5;
 }
 
 

@@ -1,43 +1,17 @@
-/*
-.form {
-    //transition: bottom 400ms;
-    //transition: max-height 400ms;
-    transition: all 400ms;
-    position: relative;
-    bottom: 0;
-    max-height: 100vh;
-
-    &.is-hidden {
-        //bottom: 100vh;
-        opacity: 0;
-        max-height: 0;
-        overflow-y: hidden;
-        padding-top:0;
-        padding-bottom: 0;
-        + .plan-recommendation {
-            opacity: 1;
-            //top: 0;
-        }
-    }
-}
-*/
-//==
-
 #root {position: relative;}
 .plan-recommendation {
     opacity: 0;
-    z-index: -1;
+    z-index: 1;
     max-height: 100%;
     overflow-y: hidden;
-
 }
 
 .form,
 .plan-recommendation {
     transition: opacity 250ms;
-
 }
 .form {
+    position: relative;
     z-index: 3;
     &.is-hidden {
         z-index: 1;
@@ -50,15 +24,14 @@
             overflow-y: auto;
         }
     }
-
 }
 
 .plan-recommendation {
-
     transition: all 200ms;
     opacity: 0;
     position: absolute;
     top:0;
     left: 0;
     right: 0;
+    margin-bottom: $default-spacing; // emulates body padding;
 }

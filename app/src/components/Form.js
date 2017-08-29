@@ -43,8 +43,9 @@ class Form extends React.Component {
                             different social profiles,
                         </p>
                         <p>
-                            that have approximately <input type="number" name="audience" defaultValue="20000" step="1000"/> fans and followers,
+                            that together have around <input type="number" name="audience" defaultValue="20000" step="1000"/> fans and followers,
                         </p>
+
                         <p>
                             and there are <input type="number" name="users" defaultValue="3"/> people on my social media team.
                         </p>
