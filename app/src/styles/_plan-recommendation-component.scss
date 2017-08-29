@@ -1,0 +1,51 @@
+.plan-recommendation {
+    &.error {
+        h4 {
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back {
+            @extend %button;
+            display: inline-block;
+        }
+    }
+    .plan-name {
+        font-size: 3rem;
+    }
+    .value-proposition {
+        font-size: 1.75rem;
+    }
+    .details {
+        padding: $default-spacing/2;
+        font-size: 1.25rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .detail {
+        td {
+            padding: 0.5rem 1rem;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+    .buttons {
+        font-size: 1.25rem;
+        letter-spacing: .1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        a {
+            @extend %button;
+            display: block;
+            flex: 0 1 75%;
+            margin-top: $default-spacing/2;
+            margin-bottom: $default-spacing/2;
+        }
+
+    }
+
+}

@@ -1,0 +1,46 @@
+$default-spacing: 2rem;
+
+//$medium-width: 45rem; // 720px @ root=16px
+$medium-width: 40rem; // 640px @ root=16px
+$small-width: 30rem;  // 480px @ root=16px
+
+@mixin large {
+    @media screen and (min-width:#{$medium-width}){
+        @content;
+    }
+}
+@mixin medium {
+    @media screen and (max-width:#{$medium-width}){
+        @content;
+    }
+}
+
+@mixin small {
+    @media screen and (max-width:#{$small-width}){
+        @content;
+    }
+}
+
+%button {
+    $border-radius: 1rem/6;
+    $border-width: 1rem/9;
+    border-radius: $border-radius;
+    border: $border-width solid transparent;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 100ms;
+    color: $base;
+    text-decoration: none;
+    background-color: $green-primary;
+    &:hover{
+        background-color: $green-secondary;
+    }
+}
+
+%clearfix {
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

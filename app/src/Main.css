@@ -402,15 +402,6 @@ template {
 [hidden] {
   display: none; }
 
-h1, h2, h3, h4 {
-  font-weight: 600; }
-
-a {
-  color: #000;
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
-
 .form .find-my-plan, .plan-recommendation.error .back, .plan-recommendation .buttons a {
   border-radius: 0.16667rem;
   border: 0.11111rem solid transparent;
@@ -423,14 +414,39 @@ a {
   .form .find-my-plan:hover, .plan-recommendation.error .back:hover, .plan-recommendation .buttons a:hover {
     background-color: #2BB656; }
 
+.form:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 body {
   padding: 2rem;
   font-family: "Proxima Nova",proxima-nova,Helvetica Neue,Helvetica,Arial,sans-serif;
   background-color: #f3f4f4; }
 
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+select:focus,
+input:focus {
+  outline-color: #59CB59; }
+
 .guide-headline {
   font-weight: 400;
-  margin-top: 0; }
+  padding-top: 0; }
+  @media screen and (max-width: 40rem) {
+    .guide-headline {
+      font-size: 1.5rem; } }
 
 .form,
 .plan-recommendation {
@@ -449,14 +465,57 @@ body {
   max-width: 100%; }
 
 .form .guide-headline {
-  padding: 0 1rem;
   text-align: left;
   margin-bottom: 0; }
+  @media screen and (min-width: 40rem) {
+    .form .guide-headline {
+      padding: 0 0 0 0.25em; } }
+
+.form .questions {
+  text-align: left;
+  font-size: 1.5rem; }
+  .form .questions p {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 2; }
+    @media screen and (max-width: 40rem) {
+      .form .questions p {
+        font-size: 1.25rem;
+        line-height: 1.5rem; } }
+
+.form input, .form select {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+
+.form input[type="number"] {
+  max-width: 6em;
+  text-align: center; }
+
+.form input[name="users"] {
+  max-width: 3em; }
+
+.form select {
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
 
 .form .find-my-plan {
+  float: right;
   display: inline-block;
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+@media screen and (max-width: 30rem) {
+  .form .header {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .form .logo {
+    max-width: 50%; }
+  .form .guide-headline {
+    text-align: center;
+    padding-bottom: 1rem; } }
 
 .plan-recommendation.error h4 {
   max-width: 75%;
@@ -472,10 +531,16 @@ body {
 .plan-recommendation .value-proposition {
   font-size: 1.75rem; }
 
-.plan-recommendation .detail {
-  display: flex; }
-  .plan-recommendation .detail div {
-    padding: 0.5rem; }
+.plan-recommendation .details {
+  padding: 1rem;
+  font-size: 1.25rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.plan-recommendation .detail td {
+  padding: 0.5rem 1rem; }
+  .plan-recommendation .detail td:first-child {
+    text-align: left; }
 
 .plan-recommendation .buttons {
   font-size: 1.25rem;
@@ -543,6 +608,13 @@ body {
   top: 0;
   left: 0;
   right: 0; }
+
+@media screen and (min-width: 40rem) {
+  body {
+    background-color: lightgreen; } }
+
+.questions-x {
+  display: none; }
 
 .test-triggers {
   position: fixed;

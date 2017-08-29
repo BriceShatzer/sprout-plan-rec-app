@@ -22,10 +22,10 @@ class PlanRecommendation extends React.Component {
             const planLink = getRecommendedPlanLink(this.props.planRecommendation);
             const details = content.details;
             const detailElements = Object.keys(details).map((detail,i) =>
-                <div key={i} className="detail">
-                    <div>{detail}</div>
-                    <div>{details[detail]}</div>
-                </div>
+                <tr key={i} className="detail">
+                    <td>{detail}</td>
+                    <td>{details[detail]}</td>
+                </tr>
             );
 
             return (
@@ -33,11 +33,14 @@ class PlanRecommendation extends React.Component {
                     <h1 className="guide-headline">The plan that's right for you is...</h1>
                     <h1 className="plan-name">{content.name}</h1>
                     <h2 className="value-proposition">{content.headline}</h2>
-                    <div className="details">
+                    <table className="details">
                         {detailElements}
-                    </div>
+                    </table>
                     <h2>All Plans Include a Free 30-day Trial</h2>
-                    <h4>Best-in-class social media management and engagement software. Change Plans or cancel at anytime.</h4>
+                    <h4>
+                        Best-in-class social media management and engagement software. <br/>
+                        Change Plans or cancel at anytime.
+                    </h4>
                     <div className="buttons">
                         <a href={planLink} target="_blank" rel="noopener noreferrer">
                             Start My Free Trial

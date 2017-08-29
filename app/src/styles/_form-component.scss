@@ -1,0 +1,77 @@
+.form {
+    @extend %clearfix;
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        max-width: 100%;
+
+    }
+    .guide-headline {
+        text-align: left;
+        margin-bottom: 0;
+        @include large {
+            padding: 0 0 0 0.25em;
+        }
+
+    }
+    .questions {
+        text-align: left;
+        font-size: 1.5rem;
+        p {
+            margin: 0;
+            padding-top: $default-spacing/2;
+            padding-bottom: $default-spacing/2;
+            line-height: 2;
+            @include medium {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+        }
+
+    }
+    input,select{
+        font-size: 1.25rem;
+        text-align: center;
+        margin-left: 0.5em;
+        margin-right: 0.5em
+    }
+    input[type="number"]{
+        max-width:6em;
+        text-align: center;
+    }
+    input[name="users"]{
+        max-width:3em;
+    }
+    select {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    .find-my-plan {
+        @extend %button;
+        float:right;
+        display: inline-block;
+        margin-top: $default-spacing/2;
+        margin-bottom: $default-spacing/2;
+    }
+    //@media screen and (max-width: 45rem) {
+    //    .questions {
+    //        p {
+    //            font-size: 1.25rem;
+    //            line-height: 1.5;
+    //        }
+    //    }
+    //}
+    @include small {
+        .header{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .logo{max-width:50%;}
+        .guide-headline {
+            text-align: center;
+            padding-bottom: $default-spacing/2;
+        }
+    }
+}
