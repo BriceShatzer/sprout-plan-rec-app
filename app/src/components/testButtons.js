@@ -1,21 +1,26 @@
 import React from 'react';
+import { getPlanData } from '../data/getPlanData';
 
 class TestButtons extends React.Component{
-    constructor(props) {
-        super(props);
-    }
 
     updatePlanRecommendation(recommendation){
         this.props.updatePlanRecommendation(recommendation);
     }
+    
+    returnToForm(event) {
+        event.preventDefault();
+        this.props.toggleFormVisibility();
+    }
 
     render() {
+        const planDataObj = getPlanData();
+        const planButtons = Object.keys(planDataObj).map((plan,i) =>
+            <button key={i} onClick={() => this.updatePlanRecommendation(plan)}>{plan}</button>
+        );
         return (
             <div className="test-triggers">
-                <button onClick={() => this.updatePlanRecommendation('deluxe')}>Deluxe</button>
-                <button onClick={() => this.updatePlanRecommendation('premium')}>Premium</button>
-                <button onClick={() => this.updatePlanRecommendation('team')}>Team</button>
-                <button onClick={() => this.updatePlanRecommendation('enterprise')}>Enterprise</button>
+                <button onClick={(event) => this.returnToForm(event)}>Toggle Form</button>
+                {planButtons} 
             </div>
         );
     }

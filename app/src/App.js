@@ -44,6 +44,7 @@ class App extends Component {
                     planRecommendation = {this.state.planRecommendation}
                 />
                 <TestButtons
+                    toggleFormVisibility = {this.toggleFormVisibility}
                     updatePlanRecommendation = {this.updatePlanRecommendation}
                 />
 

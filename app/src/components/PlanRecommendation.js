@@ -45,8 +45,6 @@ class PlanRecommendation extends React.Component {
                         Compare Plans
                     </a>
                 </div>
-                
-                <a href="/" id="showForm" onClick={(event) => this.returnToForm(event)}>Show Form</a>
             </section>
         )
         
