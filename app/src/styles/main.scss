@@ -56,28 +56,3 @@ input {
 @import "form-component";
 @import "plan-recommendation-component";
 @import "transition-behavior";
-
-
-body {
-
-}
-
-
-.questions-x{display:none;}
-.test-triggers {
-    position: fixed;
-    right: 0;
-    top: 0;
-    display: flex;
-    //justify-content: around;
-    button {
-        margin:0.5rem 0.25rem;
-        @include large { background-color: lightgreen; }
-        @include medium { background-color: lightgoldenrodyellow; }
-        @include small { background-color: lightcoral }
-    }
-    z-index: 5;
-    opacity: 0.5;
-}
-
-

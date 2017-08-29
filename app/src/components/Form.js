@@ -53,18 +53,6 @@ class Form extends React.Component {
                     </a>
                 </form>
             </section>
-/*
-
- <div className="questions">
-     <label htmlFor="socialprofiles">How many social profiles do you manage?</label>
-     <input type="number" id="socialprofiles" name="socialprofiles" /><br />
-     <label htmlFor="audience">How many followers do your social profiles have?</label>
-     <input type="number" id="audience" name="audience"  /><br />
-     <label htmlFor="users">How many people are on your social media team?</label>
-     <input type="number" id="users" name="users" /><br />
- </div>
-*/
-
         );
     }
 }

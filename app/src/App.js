@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
 import PlanRecommendation from './components/PlanRecommendation';
-import TestButtons from './components/testButtons';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             formIsHidden: false,
-            //formIsHidden: true, // <- value for mockup only
             planRecommendation: ''
         };
 
@@ -39,13 +37,7 @@ class App extends Component {
                     toggleFormVisibility = {this.toggleFormVisibility}
                     planRecommendation = {this.state.planRecommendation}
                 />
-                <TestButtons
-                    toggleFormVisibility = {this.toggleFormVisibility}
-                    updatePlanRecommendation = {this.updatePlanRecommendation}
-                />
-
             </div>
-
         ); 
     }
 }
